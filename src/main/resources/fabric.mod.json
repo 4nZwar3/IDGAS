@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "id": "sagdi",
+  "version": "${version}",
+
+  "name": "SAGDI",
+  "description": "Short for I Don't Give A Shit backwards",
+  "authors": [
+    "Answare"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/sadgi/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.rum.sagdi.Sagdi"
+    ],
+    "client": [
+      "net.rum.sagdi.SagdiClient"
+    ]
+  },
+  "mixins": [
+    "sagdi.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.14.6",
+    "fabric": "*",
+    "minecraft": "~1.19",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}
