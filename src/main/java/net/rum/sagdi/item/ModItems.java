@@ -1,6 +1,7 @@
 package net.rum.sagdi.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.minecraft.item.FoodComponents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.util.Identifier;
@@ -9,7 +10,7 @@ import net.rum.sagdi.Sagdi;
 
 public class ModItems {
     public static final Item TEST_ITEM = registerItem("test_item", 
-        new Item(new FabricItemSettings().group(ItemGroup.MISC)));
+        new Item(new FabricItemSettings().group(ItemGroup.FOOD).fireproof().food(FoodComponents.BEEF)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(Sagdi.MOD_ID, name), item);
